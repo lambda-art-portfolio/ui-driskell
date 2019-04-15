@@ -135,7 +135,7 @@ html {
   width: 100%;
 }
 body {
-  font-size: 1.6rem;
+  font-size: 2rem;
   width: 100%;
 }
 h1 {
@@ -158,7 +158,11 @@ h2 {
 .top-section .text-wrapper {
   margin-top: 35vh;
 }
-.top-section .text-wrapper h1 {
+.top-section .text-wrapper .title {
+  display: flex;
+  justify-content: space-around;
+}
+.top-section .text-wrapper .title h1 {
   border: 1px solid #4C5A72;
   padding: 5px 15px;
 }
@@ -200,4 +204,98 @@ h2 {
 .hook .img-wrapper img {
   min-height: 100%;
   width: auto;
+}
+.second-hook {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  background-color: #EBECEF;
+  width: 100%;
+  height: 100vh;
+}
+.second-hook .text-wrapper {
+  justify-self: flex-end;
+  align-self: flex-end;
+  position: absolute;
+  padding-bottom: 5vh;
+}
+.second-hook .text-wrapper h2 {
+  text-align: center;
+  padding-left: 50vw;
+  color: #06061C;
+}
+.second-hook .img-wrapper {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  height: 100%;
+  min-height: 100%;
+  align-self: flex-end;
+  overflow: hidden;
+}
+.second-hook .img-wrapper img {
+  min-height: 100%;
+  width: auto;
+}
+.features {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+}
+.features .text-wrapper {
+  justify-self: center;
+  align-self: flex-end;
+  position: absolute;
+  padding-bottom: 15vh;
+}
+.features .text-wrapper h2 {
+  text-align: center;
+  color: #E3EBED;
+}
+.features .img-wrapper {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  height: 100%;
+  min-height: 100%;
+  align-self: flex-end;
+  overflow: hidden;
+}
+.features .img-wrapper img {
+  min-height: 100%;
+  width: auto;
+}
+.bottom-section {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100vh;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  background-color: #4C5A72;
+}
+.bottom-section .text-wrapper {
+  margin-top: 35vh;
+}
+.bottom-section .text-wrapper button {
+  background-color: transparent;
+  color: #E3EBED;
+  border: 1px solid #E3EBED;
+  padding: 5px 15px;
+}
+.bottom-section .text-wrapper button:hover {
+  background-color: #0C0E35;
+}
+.bottom-section .text-wrapper button:active {
+  background-color: #1E245E;
+}
+.bottom-section .text-wrapper p {
+  margin-top: 2rem;
+}
+.bottom-section .copyright {
+  margin-top: auto;
+  margin-bottom: 2rem;
 }
