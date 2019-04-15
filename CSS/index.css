@@ -299,3 +299,11 @@ h2 {
   margin-top: auto;
   margin-bottom: 2rem;
 }
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #0C0E35;
+  width: 100%;
+  min-height: 100vh;
+}
