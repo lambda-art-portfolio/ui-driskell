@@ -38,7 +38,7 @@ h2 {
     margin-top: 1vh;
     width: 100%;
     font-size: 5vh;
-    z-index: 1000;
+    z-index: 100;
     color: @light;
     transition: color 0.4 ease;
     .arrow-up{
@@ -173,17 +173,19 @@ h2 {
     align-items: center;
     text-align: center;
     justify-content: center;
-    background-color: @neutralMid;
+    background-color: @light;
     .text-wrapper {
         margin-top: 35vh;
         button{
             background-color: transparent;
-            color: @light;
-            border: 1px solid @light;
+            color: @darkest;
+            border: 1px solid @darkest;
             padding: 5px 15px;
         }
         button:hover {
-            background-color: @midDark;
+            background-color: @darkest;
+            color: @light;
+            border: 1px solid @light;
         }
         button:active {
             background-color: @lightDark;
@@ -195,5 +197,6 @@ h2 {
     .copyright {
         margin-top: auto;
         margin-bottom: 2rem;
+        color: @darkest;
     }
 }

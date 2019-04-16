@@ -16,52 +16,52 @@ var dist = 0;
 function arrowColor() {
     if (sections[dist].dataset.light == 'light') {
         if (dist == sections.length-1) {
-            jQuery('.arrow-down').animate({
+            $('.arrow-down').animate({
                 color: jQuery.Color({alpha: 0})
             }, 100, 'swing')
-            jQuery('.arrow-up').animate({
+            $('.arrow-up').animate({
                 color: jQuery.Color("#06061C")
             }, 500, 'swing')
         }
         else if (dist == 0) {
-            jQuery('.arrow-up').animate({
+            $('.arrow-up').animate({
                 color: jQuery.Color({alpha: 0})
             }, 100, 'swing')
-            jQuery('.arrow-down').animate({
+            $('.arrow-down').animate({
                 color: jQuery.Color("#06061C")
             }, 500, 'swing')
         }
         else {
-            jQuery('.arrow-up').animate({
+            $('.arrow-up').animate({
                 color: jQuery.Color("#06061C")
             }, 500, 'swing')
-            jQuery('.arrow-down').animate({
+            $('.arrow-down').animate({
                 color: jQuery.Color("#06061C")
             }, 500, 'swing')
         }
     }
     else {
         if (dist == sections.length-1) {
-            jQuery('.arrow-down').animate({
+            $('.arrow-down').animate({
                 color: jQuery.Color({alpha: 0})
             }, 100, 'swing')
-            jQuery('.arrow-up').animate({
+            $('.arrow-up').animate({
                 color: jQuery.Color("#E3EBED")
             }, 500, 'swing')
         }
         else if (dist == 0) {
-            jQuery('.arrow-up').animate({
+            $('.arrow-up').animate({
                 color: jQuery.Color({alpha: 0})
             }, 100, 'swing')
-            jQuery('.arrow-down').animate({
+            $('.arrow-down').animate({
                 color: jQuery.Color("#E3EBED")
             }, 500, 'swing')
         }
         else {
-            jQuery('.arrow-up').animate({
+            $('.arrow-up').animate({
                 color: jQuery.Color("#E3EBED")
             }, 500, 'swing')
-            jQuery('.arrow-down').animate({
+            $('.arrow-down').animate({
                 color: jQuery.Color("#E3EBED")
             }, 500, 'swing')
         }
@@ -83,10 +83,9 @@ function arrowColor() {
 //     }
 // }
 
-for (let i = 0; i < sections.length; i++) {
-    sections[i].id = `sectionElement${i}`;
-    console.log(sections[i]);
-};
+sections.forEach( (element, index) => {
+    element.id = `sectionElement${index}`
+})
 
 window.addEventListener('wheel', event => {
     event.preventDefault();
@@ -138,7 +137,6 @@ window.addEventListener('keydown', event => {
 });
 
 downArrow.addEventListener('click', event => {
-    event.preventDefault();
         if ( dist < sections.length-1 ){
             dist += 1;
             arrowColor();
@@ -147,7 +145,6 @@ downArrow.addEventListener('click', event => {
 });
 
 upArrow.addEventListener('click', event => {
-    event.preventDefault();
         if ( dist > 0 ){
             dist -= 1;
             arrowColor();

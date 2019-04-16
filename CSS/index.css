@@ -156,7 +156,7 @@ h2 {
   margin-top: 1vh;
   width: 100%;
   font-size: 5vh;
-  z-index: 1000;
+  z-index: 100;
   color: #E3EBED;
   transition: color 0.4 ease;
 }
@@ -286,19 +286,21 @@ h2 {
   align-items: center;
   text-align: center;
   justify-content: center;
-  background-color: #4C5A72;
+  background-color: #E3EBED;
 }
 .bottom-section .text-wrapper {
   margin-top: 35vh;
 }
 .bottom-section .text-wrapper button {
   background-color: transparent;
-  color: #E3EBED;
-  border: 1px solid #E3EBED;
+  color: #06061C;
+  border: 1px solid #06061C;
   padding: 5px 15px;
 }
 .bottom-section .text-wrapper button:hover {
-  background-color: #0C0E35;
+  background-color: #06061C;
+  color: #E3EBED;
+  border: 1px solid #E3EBED;
 }
 .bottom-section .text-wrapper button:active {
   background-color: #1E245E;
@@ -309,6 +311,7 @@ h2 {
 .bottom-section .copyright {
   margin-top: auto;
   margin-bottom: 2rem;
+  color: #06061C;
 }
 .container {
   display: flex;
