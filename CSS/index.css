@@ -146,6 +146,23 @@ h2 {
   font-weight: 300;
   font-size: 5.4rem;
 }
+.arrow-buttons {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 98vh;
+  margin-top: 1vh;
+  width: 100%;
+  font-size: 5vh;
+  z-index: 1000;
+  color: #E3EBED;
+  transition: color 0.4 ease;
+}
+.arrow-buttons .arrow-up {
+  color: transparent;
+}
 .top-section {
   display: flex;
   flex-direction: column;
@@ -156,7 +173,7 @@ h2 {
   justify-content: center;
 }
 .top-section .text-wrapper {
-  margin-top: 35vh;
+  margin-top: -10vh;
 }
 .top-section .text-wrapper .title {
   display: flex;
@@ -168,11 +185,6 @@ h2 {
 }
 .top-section .text-wrapper p {
   margin-top: 2rem;
-}
-.top-section i {
-  margin-top: auto;
-  margin-bottom: 25px;
-  font-size: 7rem;
 }
 .hook {
   display: flex;

@@ -7,9 +7,81 @@ $("html,body").animate({scrollTop: 0}, 50, 'swing');
 const sections = document.querySelectorAll('.scroll-to');
 // console.log(sections);
 // console.log(sections.length);
+
+const upArrow = document.querySelector('.arrow-up');
+const downArrow = document.querySelector('.arrow-down');
+
 var dist = 0;
 
-console.log(sections[dist]);
+function arrowColor() {
+    if (sections[dist].dataset.light == 'light') {
+        if (dist == sections.length-1) {
+            jQuery('.arrow-down').animate({
+                color: jQuery.Color({alpha: 0})
+            }, 100, 'swing')
+            jQuery('.arrow-up').animate({
+                color: jQuery.Color("#06061C")
+            }, 500, 'swing')
+        }
+        else if (dist == 0) {
+            jQuery('.arrow-up').animate({
+                color: jQuery.Color({alpha: 0})
+            }, 100, 'swing')
+            jQuery('.arrow-down').animate({
+                color: jQuery.Color("#06061C")
+            }, 500, 'swing')
+        }
+        else {
+            jQuery('.arrow-up').animate({
+                color: jQuery.Color("#06061C")
+            }, 500, 'swing')
+            jQuery('.arrow-down').animate({
+                color: jQuery.Color("#06061C")
+            }, 500, 'swing')
+        }
+    }
+    else {
+        if (dist == sections.length-1) {
+            jQuery('.arrow-down').animate({
+                color: jQuery.Color({alpha: 0})
+            }, 100, 'swing')
+            jQuery('.arrow-up').animate({
+                color: jQuery.Color("#E3EBED")
+            }, 500, 'swing')
+        }
+        else if (dist == 0) {
+            jQuery('.arrow-up').animate({
+                color: jQuery.Color({alpha: 0})
+            }, 100, 'swing')
+            jQuery('.arrow-down').animate({
+                color: jQuery.Color("#E3EBED")
+            }, 500, 'swing')
+        }
+        else {
+            jQuery('.arrow-up').animate({
+                color: jQuery.Color("#E3EBED")
+            }, 500, 'swing')
+            jQuery('.arrow-down').animate({
+                color: jQuery.Color("#E3EBED")
+            }, 500, 'swing')
+        }
+    }
+}
+
+// function arrowVisible() {
+//     if (dist == sections.length) {
+//         downArrow.style.visibility = "hidden";
+//     }
+//     if (dist == 0) {
+//         $(upArrow).animate({
+//             color: jQuery.Color("transparent")
+//         }).style.visibility = "hidden";
+//     }
+//     else {
+//         upArrow.style.visibility = "visible";
+//         downArrow.style.visibility = "visible";
+//     }
+// }
 
 for (let i = 0; i < sections.length; i++) {
     sections[i].id = `sectionElement${i}`;
@@ -25,6 +97,7 @@ window.addEventListener('wheel', event => {
         if ( dist < sections.length-1) {
             dist += 1;
             // Animates a scroll to the current set distance
+            arrowColor();
             $("html,body").animate({scrollTop: $(`#sectionElement${dist}`).offset().top }, 500, 'swing');
             // console.log(`#sectionElement${dist}`);
         }
@@ -33,9 +106,11 @@ window.addEventListener('wheel', event => {
     if (event.deltaY < 0) {
         if ( dist > 0 ){
             dist -= 1;
+            arrowColor();
             $("html,body").animate({scrollTop: $(`#sectionElement${dist}`).offset().top }, 500, 'swing');
         }
     }
+
 });
 
 window.addEventListener('keydown', event => {
@@ -47,6 +122,7 @@ window.addEventListener('keydown', event => {
         if ( dist < sections.length-1) {
             dist += 1;
             // Animates a scroll to the current set distance
+            arrowColor();
             $("html,body").animate({scrollTop: $(`#sectionElement${dist}`).offset().top }, 500, 'swing');
         }
     }
@@ -55,8 +131,26 @@ window.addEventListener('keydown', event => {
         event.preventDefault();
         if ( dist > 0 ){
             dist -= 1;
+            arrowColor();
             $("html,body").animate({scrollTop: $(`#sectionElement${dist}`).offset().top }, 500, 'swing');
         }
     }
 });
 
+downArrow.addEventListener('click', event => {
+    event.preventDefault();
+        if ( dist < sections.length-1 ){
+            dist += 1;
+            arrowColor();
+            $("html,body").animate({scrollTop: $(`#sectionElement${dist}`).offset().top }, 500, 'swing');
+        }
+});
+
+upArrow.addEventListener('click', event => {
+    event.preventDefault();
+        if ( dist > 0 ){
+            dist -= 1;
+            arrowColor();
+            $("html,body").animate({scrollTop: $(`#sectionElement${dist}`).offset().top }, 500, 'swing');
+        }
+});
