@@ -1,5 +1,8 @@
 //Javascript
 
+//Menu
+
+const menu = document.querySelectorAll('.menu-link');
 
 //Scrolling Sections
 $("html,body").animate({scrollTop: 0}, 50, 'swing');
@@ -15,6 +18,11 @@ var dist = 0;
 
 function arrowColor() {
     if (sections[dist].dataset.light == 'light') {
+        menu.forEach(element => {
+            $(element).animate({
+                color: jQuery.Color('#06061C')
+            }, 500, 'swing');
+        });
         if (dist == sections.length-1) {
             $('.arrow-down').animate({
                 color: jQuery.Color({alpha: 0})
@@ -40,7 +48,12 @@ function arrowColor() {
             }, 500, 'swing')
         }
     }
-    else {
+    else {    
+        menu.forEach(element => {
+            $(element).animate({
+                color: jQuery.Color('#E3EBED')
+            }, 500, 'swing');
+        });
         if (dist == sections.length-1) {
             $('.arrow-down').animate({
                 color: jQuery.Color({alpha: 0})
