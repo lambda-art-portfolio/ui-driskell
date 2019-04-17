@@ -215,6 +215,7 @@ h2 {
 .hook .text-wrapper {
   position: absolute;
   padding-top: 3vh;
+  display: none;
 }
 .hook .text-wrapper h2 {
   text-align: right;
@@ -418,6 +419,7 @@ h2 {
   padding-left: 3vw;
   text-align: right;
   background-color: rgba(6, 6, 28, 0.5);
+  display: none;
 }
 .people .member-wrapper .team {
   padding-top: 1vh;

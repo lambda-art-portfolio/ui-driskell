@@ -80,11 +80,11 @@ function arrowColor() {
         }
     }
     sections.forEach( element => {
-        element.querySelectorAll('h2').forEach( subElement => {
+        element.querySelectorAll('.fadeable').forEach( subElement => {
             $(subElement).delay(100).fadeOut();
         })
     })
-    sections[dist].querySelectorAll('h2').forEach( element => {
+    sections[dist].querySelectorAll('.fadeable').forEach( element => {
         $(element).delay(300).fadeIn('slow');
     })
 }
@@ -105,12 +105,12 @@ function arrowColor() {
 // }
 
 
-//Pre-fade
-sections.forEach( element => {
-    element.querySelectorAll('h2').forEach( subElement => {
-        $(subElement).fadeOut();
-    })
-})
+// //Pre-fade
+// sections.forEach( element => {
+//     element.querySelectorAll('fadeable').forEach( subElement => {
+//         $(subElement).fadeOut();
+//     })
+// })
 
 sections.forEach( (element, index) => {
     element.id = `sectionElement${index}`
