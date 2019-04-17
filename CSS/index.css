@@ -383,6 +383,7 @@ h2 {
 .summary .text-full-container .text-wrapper.right {
   text-align: right;
   padding-right: 3vw;
+  font-size: 3rem;
 }
 .summary .img-wrapper {
   display: flex;
@@ -399,32 +400,51 @@ h2 {
 }
 .people {
   display: flex;
-  align-items: flex-start;
-  justify-content: flex-end;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
   background-color: #EBECEF;
   width: 100%;
   height: 100vh;
 }
-.people .text-wrapper {
+.people .member-wrapper {
+  display: flex;
+  flex-direction: column;
   position: absolute;
-  padding-top: 3vh;
-}
-.people .text-wrapper h2 {
-  text-align: right;
-  padding-left: 3vw;
+  padding-top: 1vh;
+  width: 60%;
+  align-items: flex-end;
   padding-right: 3vw;
-  color: #06061C;
+  padding-left: 3vw;
+  text-align: right;
+  background-color: rgba(6, 6, 28, 0.5);
+}
+.people .member-wrapper .team {
+  padding-top: 1vh;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: space-between;
+}
+.people .member-wrapper .team .member {
+  display: flex;
+  flex-direction: column;
+  width: 26%;
+  padding-bottom: 3vh;
+}
+.people .member-wrapper .team .member img {
+  width: 100%;
+  padding-bottom: 0.5vh;
+}
+.people .copyright {
+  position: absolute;
+  align-self: center;
+  margin-top: 95vh;
 }
 .people .img-wrapper {
-  display: flex;
-  align-items: flex-end;
-  justify-content: center;
-  height: 100%;
-  min-height: 100%;
-  align-self: flex-end;
   overflow: hidden;
 }
 .people .img-wrapper img {
   min-height: 100%;
-  width: auto;
+  width: 100%;
 }
