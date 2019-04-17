@@ -10,14 +10,22 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400" rel="stylesheet">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
         <link rel="stylesheet" type="text/css" href="./CSS/index.css">
-        <script src="./JS/index.js" async></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="JS/jquery.color-2.1.2.min.js"></script>
     </head>
     <body>
         <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
-        <div class="container">
+        <div class="arrow-up">
+            <i class="fas fa-chevron-up"></i>
+        </div>
+        <div class="arrow-down">
+            <i class="fas fa-chevron-down"></i>
+        </div>
+        <section class="summary scroll-to" data-light='dark'>
             <header class="menu">
                 <div class="about-link">
                     <a href="about.html">about us</a>
@@ -29,51 +37,30 @@
                     <a href="#">sign up</a>
                 </div>
             </header>
-            <div class="about-us">
-                <div class="summary">
+            <div class="text-full-container">
+                <div class="text-wrapper left">
                     <h1>About Us</h1>
-                    <div class="text-body">
-                            <p>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                            </p>
-                    </div>
                 </div>
-                <div class="members-table">
-                    <h2>Members</h2>
-                    <div class="team">
-                        <div class="member">
-                            <img src="https://avatars0.githubusercontent.com/u/572991?s=400&v=4">
-                            <h3>Samuel Machat</h3>
-                            <p>Team Lead</p>
-                        </div>
-                        <div class="member">
-                            <img src="https://avatars2.githubusercontent.com/u/32081816?s=460&v=4">
-                            <h3>Irving Jose Duran</h3>
-                            <p>Front End Developer</p>
-                        </div>
-                        <div class="member">
-                            <img src="https://avatars3.githubusercontent.com/u/19802883?s=460&v=4">
-                            <h3>Andrew J Bush</h3>
-                            <p>Back End Developer</p>
-                        </div>
-                        <div class="member">
-                            <img src="https://avatars2.githubusercontent.com/u/46353436?s=460&v=4">
-                            <h3>Ryan Freeman</h3>
-                            <p>Back End Developer</p>
-                        </div>
-                        <div class="member">
-                            <img src="https://avatars0.githubusercontent.com/u/33584526?s=460&v=4">
-                            <h3>Bobby Driskell</h3>
-                            <p>Marketing UI Developer</p>
-                        </div>
-                        <div class="member">
-                            <img src="https://avatars1.githubusercontent.com/u/38443310?s=460&v=4">
-                            <h3>Preston Burton</h3>
-                            <p>Marketing UI Developer</p>
-                        </div>
-                    </div>
+                <div class="text-wrapper right">
+                        <p>We're a team of Lambda School Students</p>
                 </div>
             </div>
-        </div>
+            <div class="img-wrapper">
+                <img src="./img/paint.jpg"
+            </div>
+        </section>
+        </section>
+        <section class="people scroll-to" data-light='light'>
+            <div class="text-wrapper">
+                    <h2>A modern</h2>
+                    <h2>portfolio for</h2>
+                    <h2>professional</h2>
+                    <h2>creators</h2>
+            </div>
+            <div class="img-wrapper">
+                <img src="./img/placeholder-1.jpg"
+            </div>
+        </section>
     </body>
+    <script src="./JS/index.js" async></script>
 </html>
