@@ -1,0 +1,384 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+html {
+  background-color: #06061C;
+  color: #E3EBED;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 300;
+  font-size: 62.5%;
+  width: 100%;
+}
+a {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 300;
+  color: #E3EBED;
+}
+body {
+  font-size: 2rem;
+  width: 100%;
+}
+h1 {
+  font-weight: 400;
+  font-size: 10rem;
+}
+h2 {
+  font-weight: 300;
+  font-size: 5.4rem;
+}
+.menu {
+  display: flex;
+  position: fixed;
+  z-index: 1000;
+  height: 4vh;
+  align-items: flex-end;
+  justify-content: space-around;
+  width: 35%;
+}
+.menu a {
+  text-decoration: none;
+  font-size: 1.6rem;
+}
+.arrow-up {
+  position: fixed;
+  width: 100%;
+  text-align: center;
+  margin: 1vh 0;
+  font-size: 5vh;
+  z-index: 100;
+  color: transparent;
+}
+.arrow-down {
+  position: fixed;
+  text-align: center;
+  top: 93vh;
+  margin: 1vh 0;
+  font-size: 5vh;
+  z-index: 100;
+  color: #E3EBED;
+  width: 100%;
+}
+.top-section {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100vh;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+}
+.top-section .text-wrapper {
+  margin-top: -10vh;
+}
+.top-section .text-wrapper .title {
+  display: flex;
+  justify-content: space-around;
+}
+.top-section .text-wrapper .title h1 {
+  border: 1px solid #4C5A72;
+  padding: 5px 15px;
+}
+.top-section .text-wrapper p {
+  margin-top: 2rem;
+}
+.hook {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-end;
+  background-color: #EBECEF;
+  width: 100%;
+  height: 100vh;
+}
+.hook .text-wrapper {
+  position: absolute;
+  padding-top: 3vh;
+}
+.hook .text-wrapper h2 {
+  text-align: left;
+  padding-left: 3vw;
+  padding-right: 3vw;
+  color: #06061C;
+}
+.hook .img-wrapper {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  height: 100%;
+  min-height: 100%;
+  align-self: flex-end;
+  overflow: hidden;
+}
+.hook .img-wrapper img {
+  min-height: 100%;
+  width: auto;
+}
+.second-hook {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  background-color: #EBECEF;
+  width: 100%;
+  height: 100vh;
+}
+.second-hook .text-wrapper {
+  justify-self: flex-end;
+  align-self: flex-end;
+  position: absolute;
+  padding-bottom: 5vh;
+}
+.second-hook .text-wrapper h2 {
+  text-align: center;
+  padding-left: 50vw;
+  color: #06061C;
+}
+.second-hook .img-wrapper {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  height: 100%;
+  min-height: 100%;
+  align-self: flex-end;
+  overflow: hidden;
+}
+.second-hook .img-wrapper img {
+  min-height: 100%;
+  width: auto;
+}
+.features {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+}
+.features .text-wrapper {
+  justify-self: center;
+  align-self: flex-end;
+  position: absolute;
+  padding-bottom: 15vh;
+}
+.features .text-wrapper h2 {
+  text-align: center;
+  color: #E3EBED;
+}
+.features .img-wrapper {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  height: 100%;
+  min-height: 100%;
+  align-self: flex-end;
+  overflow: hidden;
+}
+.features .img-wrapper img {
+  min-height: 100%;
+  width: auto;
+}
+.bottom-section {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100vh;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  background-color: #E3EBED;
+  color: #06061C;
+}
+.bottom-section .text-wrapper {
+  margin-top: 35vh;
+}
+.bottom-section .text-wrapper button {
+  background-color: transparent;
+  color: #06061C;
+  border: 1px solid #06061C;
+  padding: 5px 15px;
+  transition-duration: 200ms;
+}
+.bottom-section .text-wrapper button:hover {
+  background-color: #06061C;
+  color: #E3EBED;
+  border: 1px solid #E3EBED;
+}
+.bottom-section .text-wrapper button:active {
+  color: #4C5A72;
+}
+.bottom-section .text-wrapper p {
+  margin-top: 2rem;
+}
+.bottom-section .copyright {
+  margin-top: auto;
+  margin-bottom: 2rem;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  background-color: #06061C;
+  width: 100%;
+  min-height: 100vh;
+  align-items: center;
+}
+.container .about-us {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.container .about-us h1 {
+  align-self: flex-start;
+}
+.container .about-us .text-body {
+  text-align: center;
+}
+.container h2 {
+  align-self: flex-end;
+}
+.container .team {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: space-between;
+  background-color: #4C5A72;
+}
+.container .team .member {
+  display: flex;
+  flex-direction: column;
+  width: 26%;
+  margin-bottom: 5rem;
+}
+.container .team .member img {
+  width: 100%;
+}
+.container .team .member h3 {
+  font-size: 2.8rem;
+  font-weight: 400;
+  margin: 0.6rem;
+}
+.container .team .member p {
+  margin: 0.6rem;
+}
