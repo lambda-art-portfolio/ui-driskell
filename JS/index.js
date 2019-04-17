@@ -81,7 +81,7 @@ function arrowColor() {
     }
     sections.forEach( element => {
         element.querySelectorAll('h2').forEach( subElement => {
-            $(subElement).delay(50).fadeOut('slow');
+            $(subElement).delay(100).fadeOut();
         })
     })
     sections[dist].querySelectorAll('h2').forEach( element => {
