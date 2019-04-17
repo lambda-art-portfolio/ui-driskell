@@ -151,19 +151,6 @@ h2 {
   font-weight: 300;
   font-size: 5.4rem;
 }
-.menu {
-  display: flex;
-  position: fixed;
-  z-index: 1000;
-  height: 4vh;
-  align-items: flex-end;
-  justify-content: space-around;
-  width: 35%;
-}
-.menu a {
-  text-decoration: none;
-  font-size: 1.6rem;
-}
 .arrow-up {
   position: fixed;
   width: 100%;
@@ -200,11 +187,22 @@ h2 {
   justify-content: space-around;
 }
 .top-section .text-wrapper .title h1 {
-  border: 1px solid #4C5A72;
+  border-top: 1px solid #4C5A72;
+  border-bottom: 1px solid #4C5A72;
   padding: 5px 15px;
 }
-.top-section .text-wrapper p {
+.top-section .text-wrapper .menu {
   margin-top: 2rem;
+}
+.top-section .text-wrapper .menu a {
+  font-variant: small-caps;
+  text-decoration: none;
+  margin: 2rem;
+  padding: 0.5rem 1rem;
+  border-bottom: 1px solid #4C5A72;
+}
+.top-section .text-wrapper p {
+  margin-top: 3rem;
 }
 .hook {
   display: flex;
@@ -219,7 +217,7 @@ h2 {
   padding-top: 3vh;
 }
 .hook .text-wrapper h2 {
-  text-align: left;
+  text-align: right;
   padding-left: 3vw;
   padding-right: 3vw;
   color: #06061C;
