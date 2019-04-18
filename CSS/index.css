@@ -257,7 +257,9 @@ h2 {
   align-self: flex-end;
   position: absolute;
   padding-bottom: 5vh;
-  margin-left: 45vw;
+  margin-left: 35vw;
+  overflow: hidden;
+  display: none;
 }
 @media (max-width: 800px) {
   .second-hook .text-wrapper {
@@ -298,6 +300,7 @@ h2 {
   align-self: flex-end;
   position: absolute;
   padding-bottom: 15vh;
+  display: none;
 }
 .features .text-wrapper h2 {
   text-align: center;
@@ -416,6 +419,7 @@ h2 {
 }
 @media (max-width: 800px) {
   .summary .text-full-container .text-wrapper.left h1 {
+    margin-top: 5vh;
     font-size: 16vw;
   }
 }
