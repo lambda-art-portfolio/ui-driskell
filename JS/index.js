@@ -185,3 +185,4 @@ upArrow.addEventListener('click', event => {
 
 console.log($(`#sectionElement${dist+2}`).position().top)
 console.log($(window).height());
+
