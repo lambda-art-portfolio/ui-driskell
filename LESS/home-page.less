@@ -4,6 +4,9 @@
 @neutralMid: #4C5A72;
 @light: #E3EBED;
 
+@phone: ~'(max-width: 500px)';
+@tablet: ~'(max-width: 800px)';
+
 html {
     background-color: @darkest;
     color: @light;
@@ -70,9 +73,11 @@ h2 {
             display: flex;
             justify-content: space-around;
             h1 {
-                border-top: 1px solid @neutralMid;
-                border-bottom: 1px solid @neutralMid;
+                border: 1px solid @neutralMid;
                 padding: 5px 15px;
+                @media @phone {
+                    font-size: 7rem;
+                }
             }
         }
         .menu {
@@ -100,13 +105,15 @@ h2 {
     height: 100vh;
     .text-wrapper {
         position: absolute;
-        padding-top: 3vh;
+        padding-top: 5vh;
         display: none;
         h2 {
             text-align: right;
-            padding-left: 3vw;
             padding-right: 3vw;
             color: @darkest;
+            @media @phone {
+                font-size: 12vw;
+            }
         }
     }
     .img-wrapper {
@@ -136,10 +143,16 @@ h2 {
         align-self: flex-end;
         position: absolute;
         padding-bottom: 5vh;
+        margin-left: 45vw;
+        @media @tablet {
+            margin-left: 0px;
+        }
         h2 {
             text-align: center;
-            padding-left: 50vw;
             color: @darkest;
+            @media @tablet {
+                font-size: 10vw;
+            }
         }
     }
     .img-wrapper {
@@ -171,6 +184,9 @@ h2 {
         h2 {
             text-align: center;
             color: @light;
+            @media @phone {
+                font-size: 10vw;
+            }
         }
     }
     .img-wrapper {
@@ -206,6 +222,11 @@ h2 {
             border: 1px solid @darkest;
             padding: 5px 15px;
             transition-duration: 200ms;
+            h1 {
+                @media @phone {
+                    font-size: 14vw;
+                }
+            }
         }
         button:hover {
             background-color: @darkest;

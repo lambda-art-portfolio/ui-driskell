@@ -45,15 +45,29 @@
         width: 100%;
         height: 100%;
         align-items: center;
-        justify-content: space-between;
+        justify-content: space-around;
+        @media @tablet {
+            flex-direction: column;
+        }
         .text-wrapper.left {
             padding-left: 3vw;
             margin-bottom: 20vh;
+            h1 {
+                @media @tablet {
+                    font-size: 16vw;
+                }
+            }            
         }
         .text-wrapper.right {
             text-align: right; 
             padding-right: 3vw;
             font-size: 3rem;
+            @media @tablet {
+                margin-bottom: 20%;
+                font-size: 7vw;
+                text-align: left;
+                padding-left: 3vw;
+            }
         }
     }
     .img-wrapper {
@@ -91,6 +105,17 @@
         text-align: right;
         background-color: @darkestFaded;
         display: none;
+        @media @tablet {
+            width: 80%;
+            align-items: center;
+            align-self: center;
+            text-align: center;
+        }
+        h2 {
+            @media @phone {
+                display: none;
+            }
+        }
         .team {
             padding-top: 1vh;
             display: flex;
@@ -102,6 +127,15 @@
                 flex-direction: column;
                 width: 26%;
                 padding-bottom: 3vh;
+                @media @phone {
+                    width: 46%;
+                }
+                p {
+                    @media @phone {
+                        font-size: 1.8rem;
+                        font-weight: 300;
+                    }
+                }
                 img {
                     width: 100%;
                     padding-bottom: .5vh;
@@ -113,12 +147,20 @@
         position: absolute;
         align-self: center;
         margin-top: 95vh;
+        @media @tablet {
+            margin-top: 97vh;
+        }
+        p {
+            @media @phone {
+                font-size: 1.6rem;
+            }
+        }
     }
     .img-wrapper {
         overflow: hidden;
         img { 
             min-height: 100%;
-            width: 100%;
+            min-width: 100%;
         }
     }
 }

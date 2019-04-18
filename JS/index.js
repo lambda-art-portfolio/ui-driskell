@@ -89,28 +89,14 @@ function arrowColor() {
     })
 }
 
-// function arrowVisible() {
-//     if (dist == sections.length) {
-//         downArrow.style.visibility = "hidden";
-//     }
-//     if (dist == 0) {
-//         $(upArrow).animate({
-//             color: jQuery.Color("transparent")
-//         }).style.visibility = "hidden";
-//     }
-//     else {
-//         upArrow.style.visibility = "visible";
-//         downArrow.style.visibility = "visible";
-//     }
-// }
+//Touch scrolling turns everything visible, since the scrolling doesn't work the same.
+//Maybe some day I'll learn how to fix this.
 
-
-// //Pre-fade
-// sections.forEach( element => {
-//     element.querySelectorAll('fadeable').forEach( subElement => {
-//         $(subElement).fadeOut();
-//     })
-// })
+window.addEventListener('touchstart', event => {
+    document.querySelectorAll('.fadeable').forEach(element => {
+        $(element).fadeIn('fast');
+    })
+})
 
 sections.forEach( (element, index) => {
     element.id = `sectionElement${index}`
