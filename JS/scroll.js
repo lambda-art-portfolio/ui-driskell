@@ -1,18 +1,4 @@
-// const dist = 0;
-
-// function checkPos() {
-//     if($(this).scrollTop()>=$(`#sectionElement${dist+1}`).position().top &&
-//     $(this).scrollTop()<$(`#sectionElement${dist+2}`).position().top){
-//         dist += 1;
-//         return true;
-//     }
-// }
-
-// $(document).on('scroll', function() {})
-
 let currentlyAnimating = 0;
-
-let ticking = false;
 
 class Section {
     constructor(sectionElement){
