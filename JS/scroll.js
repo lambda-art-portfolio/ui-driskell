@@ -12,6 +12,8 @@
 
 let currentlyAnimating = 0;
 
+let ticking = false;
+
 class Section {
     constructor(sectionElement){
         this.sectionElement = sectionElement;
@@ -38,7 +40,7 @@ class Section {
             this.callMethods();
         })
 
-        window.addEventListener('fake-event', event => {
+        window.addEventListener('scroll', event => {
             this.callMethods();
         })
 
@@ -162,8 +164,6 @@ class Section {
 const upArrow = document.querySelector('.arrow-up');
 const downArrow = document.querySelector('.arrow-down');
 
-var fakeEvent = new CustomEvent("fake-event", { "solution": "Bad" });
-
 downArrow.addEventListener('click', event => {
     $("html,body").animate({scrollTop: $(`.next-section`).offset().top }, 500, 'swing');
     setTimeout(function () {
@@ -182,8 +182,4 @@ const sections = document.querySelectorAll('.scroll-to');
 
 sections.forEach(element => {
     new Section(element);
-})
-
-window.addEventListener('wheel', element => {
-    console.log('yo');
 })

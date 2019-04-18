@@ -219,6 +219,7 @@ h2 {
 .hook .text-wrapper {
   position: absolute;
   padding-top: 5vh;
+  display: none;
 }
 .hook .text-wrapper h2 {
   text-align: right;
@@ -418,6 +419,7 @@ h2 {
 }
 @media (max-width: 800px) {
   .summary .text-full-container .text-wrapper.left h1 {
+    margin-top: 5vh;
     font-size: 16vw;
   }
 }
