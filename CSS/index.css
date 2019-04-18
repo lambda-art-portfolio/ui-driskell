@@ -219,7 +219,6 @@ h2 {
 .hook .text-wrapper {
   position: absolute;
   padding-top: 5vh;
-  display: none;
 }
 .hook .text-wrapper h2 {
   text-align: right;
@@ -258,6 +257,7 @@ h2 {
   position: absolute;
   padding-bottom: 5vh;
   margin-left: 45vw;
+  display: none;
 }
 @media (max-width: 800px) {
   .second-hook .text-wrapper {
@@ -298,6 +298,7 @@ h2 {
   align-self: flex-end;
   position: absolute;
   padding-bottom: 15vh;
+  display: none;
 }
 .features .text-wrapper h2 {
   text-align: center;

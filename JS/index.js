@@ -18,6 +18,7 @@ var dist = 0;
 var currentlyAnimating = 0;
 
 
+
 function arrowColor() {
     // if (currentlyAnimating === 0) {
     //     currentlyAnimating = 1;
@@ -88,47 +89,59 @@ function arrowColor() {
 //Touch scrolling turns everything visible, since the scrolling doesn't work the same.
 //Maybe some day I'll learn how to fix this.
 
-window.addEventListener('touchstart', event => {
-    document.querySelectorAll('.fadeable').forEach(element => {
-        $(element).fadeIn('fast');
-    })
-})
+// window.addEventListener('touchstart', event => {
+//     document.querySelectorAll('.fadeable').forEach(element => {
+//         $(element).fadeIn('fast');
+//     })
+// })
 
 sections.forEach( (element, index) => {
     element.id = `sectionElement${index}`
 })
 
-function changeDelayVar() {
-    console.log('hey')
-    currentlyAnimating = 0;
-}
-
-window.addEventListener('wheel', event => {
-    event.preventDefault();
-    // console.log(dist);
-    if (currentlyAnimating === 0) {
-        currentlyAnimating = 1;
-        // Sets dist to next section
-        if (event.deltaY > 0) {
-            if ( dist < sections.length-1) {
-                dist += 1;
-                // Animates a scroll to the current set distance
-                arrowColor();
-                $("html,body").animate({scrollTop: $(`#sectionElement${dist}`).offset().top }, 500, 'swing');
-                // console.log(`#sectionElement${dist}`);
-            }
+//Check if I'm scrolled equal to or between each section
+$(document).on('scroll', function() {
+    if($(this).scrollTop()>=$(`#sectionElement${dist}`).position().top){
+        if (dist < sections.length-1) {
+            dist += 1;
+            arrowColor();
         }
-
-        if (event.deltaY < 0) {
-            if ( dist > 0 ){
-                dist -= 1;
-                arrowColor();
-                $("html,body").animate({scrollTop: $(`#sectionElement${dist}`).offset().top }, 500, 'swing');
-            }
-        }
-        setTimeout(changeDelayVar, 600);
     }
-});
+})
+
+//Attempted to replicate mousewheel functionality of tesla's website, didn't work out
+
+// function changeDelayVar() {
+//     console.log('hey')
+//     currentlyAnimating = 0;
+// }
+
+// window.addEventListener('wheel', event => {
+//     event.preventDefault();
+//     // console.log(dist);
+//     if (currentlyAnimating === 0) {
+//         currentlyAnimating = 1;
+//         // Sets dist to next section
+//         if (event.deltaY > 0) {
+//             if ( dist < sections.length-1) {
+//                 dist += 1;
+//                 // Animates a scroll to the current set distance
+//                 arrowColor();
+//                 $("html,body").animate({scrollTop: $(`#sectionElement${dist}`).offset().top }, 500, 'swing');
+//                 // console.log(`#sectionElement${dist}`);
+//             }
+//         }
+
+//         if (event.deltaY < 0) {
+//             if ( dist > 0 ){
+//                 dist -= 1;
+//                 arrowColor();
+//                 $("html,body").animate({scrollTop: $(`#sectionElement${dist}`).offset().top }, 500, 'swing');
+//             }
+//         }
+//         setTimeout(changeDelayVar, 3000);
+//     }
+// });
 
 window.addEventListener('keydown', event => {
     // console.log(dist);
@@ -169,3 +182,6 @@ upArrow.addEventListener('click', event => {
             $("html,body").animate({scrollTop: $(`#sectionElement${dist}`).offset().top }, 500, 'swing');
         }
 });
+
+console.log($(`#sectionElement${dist+2}`).position().top)
+console.log($(window).height());
