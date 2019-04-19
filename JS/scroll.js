@@ -152,16 +152,10 @@ const downArrow = document.querySelector('.arrow-down');
 
 downArrow.addEventListener('click', event => {
     $("html,body").animate({scrollTop: $(`.next-section`).offset().top }, 500, 'swing');
-    setTimeout(function () {
-        window.dispatchEvent(fakeEvent);
-    },500)
 });
 
 upArrow.addEventListener('click', event => {
     $("html,body").animate({scrollTop: $(`.previous-section`).offset().top }, 500, 'swing');
-    setTimeout(function () {
-        window.dispatchEvent(fakeEvent);
-    },500)
 });
 
 const sections = document.querySelectorAll('.scroll-to');
