@@ -192,7 +192,7 @@ h2 {
 }
 @media (max-width: 500px) {
   .top-section .text-wrapper .title h1 {
-    font-size: 7rem;
+    font-size: 17vw;
   }
 }
 .top-section .text-wrapper .menu {
@@ -229,6 +229,7 @@ h2 {
 @media (max-width: 500px) {
   .hook .text-wrapper h2 {
     font-size: 12vw;
+    text-shadow: -1px -1px 0 rgba(200, 200, 200, 0.5), 1px -1px 0 rgba(200, 200, 200, 0.5), -1px 1px 0 rgba(200, 200, 200, 0.5), 1px 1px 0 rgba(200, 200, 200, 0.5);
   }
 }
 .hook .img-wrapper {
@@ -383,6 +384,11 @@ h2 {
 .summary .menu a {
   text-decoration: none;
 }
+@media (max-width: 800px) {
+  .summary .menu a {
+    font-size: 5vw;
+  }
+}
 .summary .menu .home-link {
   border: 1px solid #E3EBED;
   padding: 1rem 2rem;
@@ -499,12 +505,12 @@ h2 {
 }
 @media (max-width: 500px) {
   .people .member-wrapper .team .member {
-    width: 46%;
+    width: 35vw;
   }
 }
 @media (max-width: 500px) {
   .people .member-wrapper .team .member p {
-    font-size: 1.8rem;
+    font-size: 4vw;
     font-weight: 300;
   }
 }
@@ -512,14 +518,27 @@ h2 {
   width: 100%;
   padding-bottom: 0.5vh;
 }
+.people .member-wrapper .img-wrapper {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  height: 100%;
+  min-height: 100%;
+  align-self: flex-end;
+  overflow: hidden;
+}
+.people .member-wrapper .img-wrapper img {
+  min-height: 100%;
+  width: 2000px;
+}
 .people .copyright {
   position: absolute;
   align-self: center;
-  margin-top: 95vh;
+  padding-top: 95vh;
 }
 @media (max-width: 800px) {
   .people .copyright {
-    margin-top: 97vh;
+    padding-top: 95vh;
   }
 }
 @media (max-width: 500px) {
